@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Music Ministry Questionnaire</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Georgia', serif;
+    background: #fdf8f2;
+    color: #3a2e2e;
+    padding: 30px 16px 60px;
+  }
+  .container { max-width: 680px; margin: 0 auto; }
+
+  .header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+  .header .icon { font-size: 2.4rem; margin-bottom: 10px; }
+  .header h1 {
+    font-size: 1.7rem;
+    color: #5a3e2b;
+    margin-bottom: 6px;
+  }
+  .header p {
+    font-size: 0.97rem;
+    color: #7a5c4a;
+    line-height: 1.6;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 28px 28px 20px;
+    margin-bottom: 24px;
+    border: 1px solid #e8d9cc;
+    box-shadow: 0 2px 8px rgba(90,62,43,0.06);
+  }
+  .section-title {
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #5a3e2b;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0e0d0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-title .num {
+    background: #5a3e2b;
+    color: #fff;
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+
+  .field { margin-bottom: 20px; }
+  label {
+    display: block;
+    font-size: 0.93rem;
+    color: #5a3e2b;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  .sublabel {
+    font-size: 0.82rem;
+    color: #9a7a6a;
+    font-weight: normal;
+    margin-left: 4px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 13px;
+    border: 1.5px solid #d9c4b4;
+    border-radius: 8px;
+    font-size: 0.93rem;
+    font-family: inherit;
+    background: #fdf8f2;
+    color: #3a2e2e;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: #5a3e2b;
+    background: #fff;
+  }
+  textarea { resize: vertical; min-height: 90px; }
+
+  .radio-group, .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .radio-group label, .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-weight: normal;
+    color: #3a2e2e;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1.5px solid #e8d9cc;
+    background: #fdf8f2;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .radio-group label:hover, .checkbox-group label:hover {
+    background: #f5ece3;
+    border-color: #c4a58a;
+  }
+  input[type="radio"], input[type="checkbox"] {
+    width: auto;
+    accent-color: #5a3e2b;
+  }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 500px) { .two-col { grid-template-columns: 1fr; } }
+
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: #5a3e2b;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 8px;
+  }
+  .submit-btn:hover { background: #7a5c3e; }
+
+  .success {
+    display: none;
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 14px;
+    border: 1px solid #e8d9cc;
+  }
+  .success .big { font-size: 2.5rem; margin-bottom: 12px; }
+  .success h2 { color: #5a3e2b; margin-bottom: 8px; }
+  .success p { color: #7a5c4a; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <div class="icon">🎵</div>
+    <h1>Music Ministry Team Application</h1>
+    <p>We're so glad you're interested in joining our worship team! Please take a few minutes to fill out this form. There are no wrong answers — we just want to get to know you better.</p>
+  </div>
+
+  <form id="form">
+
+    <!-- Section 1 -->
+    <div class="section">
+      <div class="section-title"><span class="num">1</span> Personal & Faith Background</div>
+
+      <div class="two-col">
+        <div class="field">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label>Contact Number</label>
+          <input type="tel" placeholder="+63 9XX XXX XXXX">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+
+      <div class="field">
+        <label>How long have you been attending our church?</label>
+        <select>
+          <option value="" disabled selected>Select one</option>
+          <option>Less than 6 months</option>
+          <option>6 months – 1 year</option>
+          <option>1 – 3 years</option>
+          <option>3 – 5 years</option>
+          <option>More than 5 years</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label>Share briefly about your faith journey. <span class="sublabel">(optional)</span></label>
+        <textarea placeholder="Feel free to share as much or as little as you'd like..."></textarea>
+      </div>
+
+      <div class="field">
+        <label>Why do you want to serve in the music ministry?</label>
+        <textarea placeholder="What draws you to worship ministry?"></textarea>
+      </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <div class="section-title"><span class="num">2</span> Musical Background & Skills</div>
+
+      <div class="field">
+        <label>What instruments do you play? <span class="sublabel">(check all that apply)</span></label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> 🎹 Keyboard / Piano</label>
+          <label><input type="checkbox"> 🎸 Electric Guitar</label>
+          <label><input type="checkbox"> 🎸 Acoustic Guitar</label>
+          <label><input type="checkbox"> 🥁 Drums / Percussion</label>
+          <label><input type="checkbox"> 🎸 Bass Guitar</label>
+          <label><input type="checkbox"> 🎤 Vocals only</label>
+          <label><input type="checkbox"> 🎵 Other (please specify below)</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Other instrument(s) <span class="sublabel">(if applicable)</span></label>
+        <input type="text" placeholder="e.g. violin, flute, etc.">
+      </div>
+
+      <div class="field">
+        <label>How would you describe your skill level?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="skill"> Beginner — still learning the basics</label>
+          <label><input type="radio" name="skill"> Intermediate — comfortable playing/singing in a group</label>
+          <label><input type="radio" name="skill"> Advanced — experienced in leading or performing</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Do you have prior experience in a worship team or choir?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="exp"> Yes, in this church</label>
+          <label><input type="radio" name="exp"> Yes, in another church or group</label>
+          <label><input type="radio" name="exp"> No, this will be my first time</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Tell us a bit about your musical background. <span class="sublabel">(optional)</span></label>
+        <textarea placeholder="Training, lessons, bands, choirs — anything you'd like to share!"></textarea>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <div class="section-title"><span class="num">3</span> Availability & Commitment</div>
+
+      <div class="field">
+        <label>Which services are you available to serve in? <span class="sublabel">(check all that apply)</span></label>
+        <div class="checkbox-group">
+          <label><input type="checkbox"> Sunday Morning Service</label>
+          <label><input type="checkbox"> Sunday Evening Service</label>
+          <label><input type="checkbox"> Midweek Service / Prayer Meeting</label>
+          <label><input type="checkbox"> Special Events (Christmas, Easter, etc.)</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Are you available to attend weekly rehearsals?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="rehearsal"> Yes, consistently</label>
+          <label><input type="radio" name="rehearsal"> Most of the time, with occasional absences</label>
+          <label><input type="radio" name="rehearsal"> I may have limited availability — I'd like to discuss this</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Do you understand that serving in the music ministry is a commitment that includes rehearsals, preparation, and spiritual growth?</label>
+        <div class="radio-group">
+          <label><input type="radio" name="commit"> Yes, I understand and I'm ready to commit</label>
+          <label><input type="radio" name="commit"> Yes, but I have some questions first</label>
+          <label><input type="radio" name="commit"> I'm still prayerfully considering</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Is there anything else you'd like us to know? <span class="sublabel">(optional)</span></label>
+        <textarea placeholder="Questions, concerns, or anything else on your heart..."></textarea>
+      </div>
+
+      <button type="button" class="submit-btn" onclick="submitForm()">Submit Application 🙏</button>
+    </div>
+
+  </form>
+
+  <div class="success" id="success">
+    <div class="big">🎶</div>
+    <h2>Thank you for applying!</h2>
+    <p>We've received your application and we're excited to get to know you more. Someone from our team will be in touch with you soon. God bless you!</p>
+  </div>
+
+</div>
+<script>
+  function submitForm() {
+    document.getElementById('form').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
