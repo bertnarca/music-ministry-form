@@ -144,18 +144,6 @@
     margin-top: 8px;
   }
   .submit-btn:hover { background: #7a5c3e; }
-
-  .success {
-    display: none;
-    text-align: center;
-    padding: 40px 20px;
-    background: #fff;
-    border-radius: 14px;
-    border: 1px solid #e8d9cc;
-  }
-  .success .big { font-size: 2.5rem; margin-bottom: 12px; }
-  .success h2 { color: #5a3e2b; margin-bottom: 8px; }
-  .success p { color: #7a5c4a; line-height: 1.6; }
 </style>
 </head>
 <body>
@@ -164,155 +152,142 @@
   <div class="header">
     <div class="icon">🎵</div>
     <h1>Music Ministry Team Application</h1>
-    <p>We're so glad you're interested in joining our worship team! Please take a few minutes to fill out this form. There are no wrong answers — we just want to get to know you better.</p>
+    <p>Masaya kaming malaman na gusto mong sumali sa aming worship team! Sagutin lang ang form na ito nang ilang minuto. Walang mali o tamang sagot — gusto lang naming makilala ka nang mas mabuti.</p>
   </div>
 
-  <form id="form">
+  <form id="form" action="https://formspree.io/f/mykvvywd" method="POST">
 
     <!-- Section 1 -->
     <div class="section">
-      <div class="section-title"><span class="num">1</span> Personal & Faith Background</div>
+      <div class="section-title"><span class="num">1</span> Personal at Faith Background</div>
 
       <div class="two-col">
         <div class="field">
-          <label>Full Name</label>
-          <input type="text" placeholder="Your name" required>
+          <label>Buong Pangalan</label>
+          <input type="text" name="Buong Pangalan" placeholder="Ang iyong pangalan" required>
         </div>
         <div class="field">
-          <label>Contact Number</label>
-          <input type="tel" placeholder="+63 9XX XXX XXXX">
+          <label>Numero ng Telepono</label>
+          <input type="tel" name="Numero ng Telepono" placeholder="+63 9XX XXX XXXX">
         </div>
       </div>
 
       <div class="field">
         <label>Email Address</label>
-        <input type="email" placeholder="your@email.com">
+        <input type="email" name="Email" placeholder="your@email.com">
       </div>
 
       <div class="field">
-        <label>How long have you been attending our church?</label>
-        <select>
-          <option value="" disabled selected>Select one</option>
-          <option>Less than 6 months</option>
-          <option>6 months – 1 year</option>
-          <option>1 – 3 years</option>
-          <option>3 – 5 years</option>
-          <option>More than 5 years</option>
+        <label>Gaano na katagal kang nag-aattend sa aming simbahan?</label>
+        <select name="Tagal sa Simbahan">
+          <option value="" disabled selected>Pumili ng isa</option>
+          <option>Wala pang 6 na buwan</option>
+          <option>6 na buwan – 1 taon</option>
+          <option>1 – 3 taon</option>
+          <option>3 – 5 taon</option>
+          <option>Mahigit 5 taon</option>
         </select>
       </div>
 
       <div class="field">
-        <label>Share briefly about your faith journey. <span class="sublabel">(optional)</span></label>
-        <textarea placeholder="Feel free to share as much or as little as you'd like..."></textarea>
+        <label>Ibahagi nang kaunti ang iyong faith journey. <span class="sublabel">(opsyonal)</span></label>
+        <textarea name="Faith Journey" placeholder="Ibahagi ang gusto mo — kahit kaunti lang..."></textarea>
       </div>
 
       <div class="field">
-        <label>Why do you want to serve in the music ministry?</label>
-        <textarea placeholder="What draws you to worship ministry?"></textarea>
+        <label>Bakit mo gustong mag-serve sa music ministry?</label>
+        <textarea name="Dahilan sa Music Ministry" placeholder="Ano ang nagudyok sa iyo para sumali sa worship ministry?"></textarea>
       </div>
     </div>
 
     <!-- Section 2 -->
     <div class="section">
-      <div class="section-title"><span class="num">2</span> Musical Background & Skills</div>
+      <div class="section-title"><span class="num">2</span> Musical Background at Skills</div>
 
       <div class="field">
-        <label>What instruments do you play? <span class="sublabel">(check all that apply)</span></label>
+        <label>Anong instrumento ang alam mong tugtog? <span class="sublabel">(piliin lahat ng angkop)</span></label>
         <div class="checkbox-group">
-          <label><input type="checkbox"> 🎹 Keyboard / Piano</label>
-          <label><input type="checkbox"> 🎸 Electric Guitar</label>
-          <label><input type="checkbox"> 🎸 Acoustic Guitar</label>
-          <label><input type="checkbox"> 🥁 Drums / Percussion</label>
-          <label><input type="checkbox"> 🎸 Bass Guitar</label>
-          <label><input type="checkbox"> 🎤 Vocals only</label>
-          <label><input type="checkbox"> 🎵 Other (please specify below)</label>
+          <label><input type="checkbox" name="Instrumento" value="Keyboard / Piano"> 🎹 Keyboard / Piano</label>
+          <label><input type="checkbox" name="Instrumento" value="Electric Guitar"> 🎸 Electric Guitar</label>
+          <label><input type="checkbox" name="Instrumento" value="Acoustic Guitar"> 🎸 Acoustic Guitar</label>
+          <label><input type="checkbox" name="Instrumento" value="Drums / Percussion"> 🥁 Drums / Percussion</label>
+          <label><input type="checkbox" name="Instrumento" value="Bass Guitar"> 🎸 Bass Guitar</label>
+          <label><input type="checkbox" name="Instrumento" value="Vocals lang"> 🎤 Vocals lang</label>
+          <label><input type="checkbox" name="Instrumento" value="Iba pa"> 🎵 Iba pa (isulat sa susunod)</label>
         </div>
       </div>
 
       <div class="field">
-        <label>Other instrument(s) <span class="sublabel">(if applicable)</span></label>
-        <input type="text" placeholder="e.g. violin, flute, etc.">
+        <label>Iba pang instrumento <span class="sublabel">(kung mayroon)</span></label>
+        <input type="text" name="Iba pang Instrumento" placeholder="hal. violin, flute, atbp.">
       </div>
 
       <div class="field">
-        <label>How would you describe your skill level?</label>
+        <label>Paano mo ilarawan ang iyong skill level?</label>
         <div class="radio-group">
-          <label><input type="radio" name="skill"> Beginner — still learning the basics</label>
-          <label><input type="radio" name="skill"> Intermediate — comfortable playing/singing in a group</label>
-          <label><input type="radio" name="skill"> Advanced — experienced in leading or performing</label>
+          <label><input type="radio" name="Skill Level"> Beginner — natututo pa lang</label>
+          <label><input type="radio" name="Skill Level"> Intermediate — komportable na mag-play/kumanta sa grupo</label>
+          <label><input type="radio" name="Skill Level"> Advanced — may karanasan na sa pagla-lead o pagpe-perform</label>
         </div>
       </div>
 
       <div class="field">
-        <label>Do you have prior experience in a worship team or choir?</label>
+        <label>May nakaraang experience ka na ba sa worship team o choir?</label>
         <div class="radio-group">
-          <label><input type="radio" name="exp"> Yes, in this church</label>
-          <label><input type="radio" name="exp"> Yes, in another church or group</label>
-          <label><input type="radio" name="exp"> No, this will be my first time</label>
+          <label><input type="radio" name="Worship Experience"> Oo, dito sa aming simbahan</label>
+          <label><input type="radio" name="Worship Experience"> Oo, sa ibang simbahan o grupo</label>
+          <label><input type="radio" name="Worship Experience"> Wala pa, ito ang magiging una ko</label>
         </div>
       </div>
 
       <div class="field">
-        <label>Tell us a bit about your musical background. <span class="sublabel">(optional)</span></label>
-        <textarea placeholder="Training, lessons, bands, choirs — anything you'd like to share!"></textarea>
+        <label>Ikwento mo ang iyong musical background. <span class="sublabel">(opsyonal)</span></label>
+        <textarea name="Musical Background" placeholder="Mga lessons, training, banda, koro — ibahagi ang gusto mo!"></textarea>
       </div>
     </div>
 
     <!-- Section 3 -->
     <div class="section">
-      <div class="section-title"><span class="num">3</span> Availability & Commitment</div>
+      <div class="section-title"><span class="num">3</span> Availability at Commitment</div>
 
       <div class="field">
-        <label>Which services are you available to serve in? <span class="sublabel">(check all that apply)</span></label>
+        <label>Sa anong mga serbisyo ka available mag-serve? <span class="sublabel">(piliin lahat ng angkop)</span></label>
         <div class="checkbox-group">
-          <label><input type="checkbox"> Sunday Morning Service</label>
-          <label><input type="checkbox"> Sunday Evening Service</label>
-          <label><input type="checkbox"> Midweek Service / Prayer Meeting</label>
-          <label><input type="checkbox"> Special Events (Christmas, Easter, etc.)</label>
+          <label><input type="checkbox" name="Serbisyo" value="Sunday Morning Service"> Sunday Morning Service</label>
+          <label><input type="checkbox" name="Serbisyo" value="Sunday Evening Service"> Sunday Evening Service</label>
+          <label><input type="checkbox" name="Serbisyo" value="Midweek Service / Prayer Meeting"> Midweek Service / Prayer Meeting</label>
+          <label><input type="checkbox" name="Serbisyo" value="Special Events"> Special Events (Pasko, Easter, atbp.)</label>
         </div>
       </div>
 
       <div class="field">
-        <label>Are you available to attend weekly rehearsals?</label>
+        <label>Available ka ba sa lingguhang rehearsal?</label>
         <div class="radio-group">
-          <label><input type="radio" name="rehearsal"> Yes, consistently</label>
-          <label><input type="radio" name="rehearsal"> Most of the time, with occasional absences</label>
-          <label><input type="radio" name="rehearsal"> I may have limited availability — I'd like to discuss this</label>
+          <label><input type="radio" name="Rehearsal Availability"> Oo, lagi</label>
+          <label><input type="radio" name="Rehearsal Availability"> Karamihan ng oras, may ilang beses lang na absent</label>
+          <label><input type="radio" name="Rehearsal Availability"> Medyo limitado ang aking oras — gusto ko itong pag-usapan</label>
         </div>
       </div>
 
       <div class="field">
-        <label>Do you understand that serving in the music ministry is a commitment that includes rehearsals, preparation, and spiritual growth?</label>
+        <label>Naiintindihan mo ba na ang pag-serve sa music ministry ay isang commitment na kinabibilangan ng rehearsals, paghahanda, at spiritual growth?</label>
         <div class="radio-group">
-          <label><input type="radio" name="commit"> Yes, I understand and I'm ready to commit</label>
-          <label><input type="radio" name="commit"> Yes, but I have some questions first</label>
-          <label><input type="radio" name="commit"> I'm still prayerfully considering</label>
+          <label><input type="radio" name="Commitment"> Oo, naiintindihan ko at handa akong mag-commit</label>
+          <label><input type="radio" name="Commitment"> Oo, pero may mga tanong pa ako</label>
+          <label><input type="radio" name="Commitment"> Nag-iisip pa ako at nagpe-pray tungkol dito</label>
         </div>
       </div>
 
       <div class="field">
-        <label>Is there anything else you'd like us to know? <span class="sublabel">(optional)</span></label>
-        <textarea placeholder="Questions, concerns, or anything else on your heart..."></textarea>
+        <label>May gusto ka pa bang ibahagi? <span class="sublabel">(opsyonal)</span></label>
+        <textarea name="Iba pang Mensahe" placeholder="Mga tanong, concern, o kung ano pa ang nasa puso mo..."></textarea>
       </div>
 
-      <button type="button" class="submit-btn" onclick="submitForm()">Submit Application 🙏</button>
+      <button type="submit" class="submit-btn">I-submit ang Application 🙏</button>
     </div>
 
   </form>
 
-  <div class="success" id="success">
-    <div class="big">🎶</div>
-    <h2>Thank you for applying!</h2>
-    <p>We've received your application and we're excited to get to know you more. Someone from our team will be in touch with you soon. God bless you!</p>
-  </div>
-
 </div>
-<script>
-  function submitForm() {
-    document.getElementById('form').style.display = 'none';
-    document.getElementById('success').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
 </body>
 </html>
